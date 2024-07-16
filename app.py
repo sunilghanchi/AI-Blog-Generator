@@ -4,6 +4,12 @@ from streamlit.components.v1 import html
 
 client = OpenAI(api_key=st.secrets['token'], base_url="https://api.groq.com/openai/v1")
 
+st.set_page_config(
+    page_title="AI Blog Generator",
+    page_icon="📝",
+    initial_sidebar_state="expanded",
+)
+
 def generate_content(system, prompt):
     response = client.chat.completions.create(
         model="llama3-8b-8192",
