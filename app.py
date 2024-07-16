@@ -1,6 +1,5 @@
 import streamlit as st
 from openai import OpenAI
-from streamlit.components.v1 import html
 
 client = OpenAI(api_key=st.secrets['token'], base_url="https://api.groq.com/openai/v1")
 
